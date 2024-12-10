@@ -1,0 +1,8 @@
+[
+    {
+        "name" : "some workout",
+        "exercises" : [
+            "exercise 1", "exercise 2"
+        ]
+    }
+]
