@@ -10,7 +10,7 @@ workout_routes = APIRouter()
 def get_all_workouts():
     with open("./fake_db/workouts.json", "r") as file: 
         return json.load(file)
-    
+
 
 def all_workouts():
     with open("./fake_db/workouts.json", "r") as file:
