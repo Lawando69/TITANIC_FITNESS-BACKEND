@@ -5,7 +5,7 @@ from models.auth_models import LoginForm, RegisterForm
 
 auth_router = APIRouter()
 
-def get_call_users():
+def get_all_users():
     with open("./fake_db/users.json", "r") as file:
         return json.load(file)
 
@@ -17,7 +17,7 @@ def save_users(new_users):
 @auth_router.post("/register")
 def register_user(register_data: RegisterForm):
 
-    all_users = get_call_users()
+    all_users = get_all_users()
     email = register_data.email
 
     if email in all_users:
@@ -35,8 +35,18 @@ def register_user(register_data: RegisterForm):
     return new_user
 
 @auth_router.post("/login")
-def login_user():
-    return {}
+def login_user(login_data: LoginForm):
+
+    all_users = get_all_users()
+    email = login_data.email
+
+    if email in all_users:
+        if all_users[email]["password"] == login_data.password:
+            return all_users[email]
+
+    raise HTTPException(404, "User not found")
+    
+
 
 
 
