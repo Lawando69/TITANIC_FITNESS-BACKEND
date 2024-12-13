@@ -34,21 +34,18 @@ def register_user(register_data: RegisterForm):
     save_users(all_users)
     return new_user
 
+
 @auth_router.post("/login")
-def login_user(login_data: LoginForm):
+def login(login_data: LoginForm):
 
     all_users = get_all_users()
     email = login_data.email
 
-    if email in all_users:
-        if all_users[email]["password"] == login_data.password:
-            return all_users[email]
-
-    raise HTTPException(404, "User not found")
-    
-
-
-
+    if email not in all_users:
+        raise HTTPException(401, "Invalid Credentials") #NOTE: The raise exception runs similar to a return in a function
+    if all_users[email]["password"] != login_data.password: #NOTE: The all_users[email]["password"] access the password with the email specified in all_users
+        raise HTTPException(401, "Invalid Credentials") #NOTE: Instead of password, we are using credentials for better security
+    return all_users[email]
 
 
 
