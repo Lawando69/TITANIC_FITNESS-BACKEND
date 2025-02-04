@@ -23,11 +23,8 @@ def register_user(register_data: RegisterForm):
     if email in all_users:
         raise HTTPException(409, "User already exists")
     
-    new_user = {
-        "email": register_data.email,
-        "username": register_data.username,
-        "password": register_data.password,
-    }
+    new_user = register_data.model_dump()
+    new_user["workouts"] = {}
 
     all_users[email] = new_user
 

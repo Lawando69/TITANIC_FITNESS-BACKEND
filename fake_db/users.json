@@ -1,42 +1,8 @@
 {
-    "goober@gmail.com": {
-        "email": "goober@gmail.com",
-        "password": "1234",
-        "username": "goober"
-    },
-    "fasdasfa@sdasdasd": {
-        "email": "fasdasfa@sdasdasd",
-        "username": "aasdas",
-        "password": "asdasdq23123"
-    },
-    "qweqweqw@adasd": {
-        "email": "qweqweqw@adasd",
-        "username": "wqeqweqwe",
-        "password": "sdasda"
-    },
-    "string": {
-        "email": "string",
-        "username": "string",
-        "password": "string"
-    },
-    "qweqweyhtutrqw@adasd": {
-        "email": "qweqweyhtutrqw@adasd",
-        "username": "wqeqweqwe",
-        "password": "sdasda"
-    },
-    "fadgadg@agagdas": {
-        "email": "fadgadg@agagdas",
-        "username": "gasgag",
-        "password": "fasfa"
-    },
-    "Lawando69@gmail.com": {
-        "email": "Lawando69@gmail.com",
-        "username": "Dash",
-        "password": "@asdKas123"
-    },
-    "Lol@gadasdasd": {
-        "email": "Lol@gadasdasd",
-        "username": "adasdasdasdasd",
-        "password": "asdasda'dasdasda#dsad"
+    "HellowWorld@gmail.com": {
+        "email": "HellowWorld@gmail.com",
+        "password": "123123",
+        "username": "helloWorld",
+        "workouts": {}
     }
 }
