@@ -25,6 +25,31 @@ class GetDay(BaseModel):
     user_email: str
     date: str
 
+class AddExercise(BaseModel):
+    user_email: str
+    date: str
+    exercise_name: str
+    reps: int
+    weight: float
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 '''
 Example for what we want the data structure to look like
 
